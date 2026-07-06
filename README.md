@@ -50,6 +50,20 @@ Für einen Produktionsbuild:
 npm run build
 ```
 
+## API-Konfiguration
+
+Die App verwendet aktuell eine Platzhalter-URL für den API-Endpoint.
+
+1. Öffne die offizielle PokeAPI-Dokumentation auf der Website.
+2. Kopiere den passenden Endpoint für ein Pokémon.
+3. Ersetze in [src/App.jsx](src/App.jsx) den Wert von `API_BASE_URL` durch deine URL.
+
+Beispiel:
+
+```js
+const API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/";
+```
+
 ## Projektstruktur
 
 ```text

@@ -7,6 +7,8 @@ const features = [
   'Schnell startbar',
 ];
 
+const API_BASE_URL = 'DEINE_POKEAPI_URL_HIER';
+
 function App() {
   const [searchValue, setSearchValue] = useState('');
   const [pokemon, setPokemon] = useState({
@@ -24,7 +26,7 @@ function App() {
     }
 
     try {
-      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonNameOrId}`);
+      const response = await fetch(`${API_BASE_URL}${pokemonNameOrId}`);
 
       if (!response.ok) {
         throw new Error('Pokemon nicht gefunden');
